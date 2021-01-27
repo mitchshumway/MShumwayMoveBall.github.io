@@ -6,7 +6,7 @@ This project required me to combine knowledge of CSS and JavaScript to create an
 
 ## Credits
 
-Original code was provided by MIT xPro Professional Certificate in Coding
+Starter code provided by MIT xPro Professional Certificate in Coding Class
 
 ## Link to Project
 
