@@ -8,6 +8,10 @@ This project required me to combine knowledge of CSS and JavaScript to create an
 
 Original code was provided by MIT xPro Professional Certificate in Coding
 
+## Link to Project
+
+https://mitchshumway.github.io/MoveBall/
+
 ## Contact
 
 mshumway1211@gmail.com
