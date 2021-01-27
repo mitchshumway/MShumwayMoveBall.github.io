@@ -1,0 +1,176 @@
+<div id="ball" style="
+  z-index:2;
+  position:absolute;
+  left:0px;
+  top: 0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green"></div>
+
+<div id="ball2" style="
+  z-index:1;
+  position:absolute;
+  left:10px;
+  top: 0px;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:maroon"></div>
+
+<div id="ball3" style="
+z-index:3;
+position:absolute;
+left:0px;
+top: 0px;
+width:100px;
+height:100px;
+border-radius:50%;
+background:sandybrown"></div>
+
+<script>
+var velocity2 = 200;
+var positionX2 = 0;
+var positionY2 = 0;
+var ball2 = document.getElementById('ball2');
+var reverseX2 = false;
+var reverseY2 = false;
+var xMin2 = 0;
+var xMax2 = 500;
+var yMin2 = 0;
+var yMax2 = 500;
+
+var velocity3 = 50;
+var positionX3 = 0;
+var positionY3 = 0;
+var ball3 = document.getElementById('ball3');
+var reverseX3 = false;
+var reverseY3 = false;
+var xMin3 = positionX2;
+var xMax3 = positionX2 + 500;
+var yMin3 = positionY2;
+var yMax3 = positionY2 + 500;
+
+
+var velocity = 300;
+var positionX = 0;
+var positionY = 0;
+var ball = document.getElementById('ball');
+var reverseX = false;
+var reverseY = false;
+var xMin = 0;
+var xMax = 500;
+var yMin = 0;
+var yMax = 500;
+// ----------------
+//setInterval(myFunction, 3000);
+
+//position = (position + 20) + velocity;
+//ball.style.left = position + 'px'
+
+function myFunction() {
+  if (positionX >= xMax || positionX <= positionX2) {
+      reverseX = true
+    };
+    if (positionX <= xMin || positionX >= positionX2) {
+      reverseX = false
+    }
+    if (reverseX === false) {
+      positionX = positionX2 + velocity;
+    }
+    else {
+      positionX = positionX2 - velocity;
+    }
+    ball.style.left = positionX + 'px';//X axis
+
+    if (positionY >= yMax <= positionY2) {
+      reverseY = true
+    };
+    if (positionY <= yMin || positionY2 >= positionY2) {
+      reverseY = false;
+      velocity = 30
+    }
+    if (reverseY === false) {
+      positionY = positionY2 + velocity;
+    }
+    else {
+      positionY = positionY2 - velocity;
+    }
+    ball.style.top = positionY + 'px';
+}
+setInterval(myFunction, 500);
+
+function myFunction2() {
+  if (positionX2 >= xMax2) {
+      reverseX2 = true
+    };
+    if (positionX2 <= xMin2) {
+      reverseX2 = false
+    }
+    if (reverseX2 === false) {
+      positionX2 = positionX2 + velocity2;
+    }
+    else {
+      positionX2 = positionX2 - velocity2;
+    }
+    ball2.style.left = positionX2 + 'px';//X axis
+
+    if (positionY2 >= yMax2) {
+      reverseY2 = true
+    };
+    if (positionY2 <= yMin2) {
+      reverseY2 = false;
+      velocity2 = 300
+    }
+    if (reverseY2 === false) {
+      positionY2 = positionY2 + velocity2;
+    }
+    else {
+      positionY2 = positionY2 - velocity2;
+    }
+    ball2.style.top = positionY2 + 'px';
+}
+setInterval(myFunction2, 500);
+
+function myFunction3() {
+  if (positionX3 >= xMax3) {
+      reverseX3 = true
+    };
+    if (positionX3 <= xMin3) {
+      reverseX3 = false
+    }
+    if (reverseX3 === false) {
+      positionX3 = positionX3 + velocity3;
+    }
+    else {
+      positionX3 = positionX3 - velocity3;
+    }
+    ball3.style.left = positionX3 + 'px';//X axis
+
+    if (positionY3 >= yMax3) {
+      reverseY3 = true
+    };
+    if (positionY3 <= yMin3) {
+      reverseY3 = false;
+      velocity3 = 300
+    }
+    if (reverseY3 === false) {
+      positionY3 = positionY3 + velocity3;
+    }
+    else {
+      positionY3 = positionY3 - velocity3;
+    }
+    ball3.style.top = positionY3 + 'px';
+}
+setInterval(myFunction3, 500);
+//if position >= 500 {
+
+
+//function myFunction() {
+  //position = (position + 15) + velocity;
+  //ball.style.left = position + 'px'
+//}
+//setInterval(myFunction, 500);
+//Works
+
+</script>
